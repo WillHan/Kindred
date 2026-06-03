@@ -98,7 +98,8 @@ function ChatLayout() {
     });
   }, [activeId, navigate]);
 
-  const context = useMemo<ChatLayoutContext>(() => ({ threads, upsertThread }), [threads, upsertThread]);
+
+
 
   return (
     <div className="flex h-screen w-full bg-background">
@@ -162,10 +163,3 @@ function ChatLayout() {
     </div>
   );
 }
-
-// Expose helpers to children via router context-less prop drilling alternative:
-// children use useRouteContext or read from window. We instead colocate by re-importing
-// loadThreads/saveThreads in the child, keyed by threadId.
-export { };
-// keep router happy
-void useRouter;
