@@ -158,11 +158,11 @@ function ChatLayout() {
       </aside>
 
       <main className="flex flex-1 flex-col">
-        {hydrated ? (
+        {hydrated && user ? (
           <Outlet />
         ) : (
           <div className="flex flex-1 items-center justify-center text-sm text-muted-foreground">
-            Loading…
+            {authLoading ? "Loading…" : !user ? "Redirecting to sign in…" : "Loading…"}
           </div>
         )}
       </main>
