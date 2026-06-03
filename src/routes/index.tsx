@@ -7,7 +7,7 @@ import {
   MessageCircleHeart,
   Compass,
   RotateCcw,
-  Github,
+  Code2,
   ArrowRight,
 } from "lucide-react";
 
