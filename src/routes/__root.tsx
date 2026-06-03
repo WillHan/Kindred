@@ -77,14 +77,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Kindred — open source AI companion for the AI era" },
+      {
+        name: "description",
+        content:
+          "Open source project using AI to find, listen to, and gently support people struggling with the mental health weight of the AI revolution.",
+      },
+      { name: "author", content: "Kindred community" },
+      { property: "og:title", content: "Kindred — open source AI companion" },
+      {
+        property: "og:description",
+        content:
+          "Outreach, conversation, support, reflection — four engines, built in the open, so no one navigates the AI era alone.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
