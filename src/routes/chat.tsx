@@ -60,7 +60,7 @@ function ChatLayout() {
       navigate({ to: "/chat/$threadId", params: { threadId: initial[0].id }, replace: true });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [user]);
 
   const upsertThread = useCallback((thread: Thread) => {
     setThreads((prev) => {
