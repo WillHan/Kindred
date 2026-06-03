@@ -23,9 +23,6 @@ function ChatLayout() {
   const navigate = useNavigate();
   const params = useParams({ strict: false }) as { threadId?: string };
   const activeId = params.threadId;
-  const navigate = useNavigate();
-  const params = useParams({ strict: false }) as { threadId?: string };
-  const activeId = params.threadId;
 
   const [threads, setThreads] = useState<Thread[]>([]);
   const [hydrated, setHydrated] = useState(false);
