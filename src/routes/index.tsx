@@ -71,7 +71,7 @@ function Landing() {
             rel="noreferrer noopener"
             className="hidden items-center gap-2 text-sm text-muted-foreground hover:text-foreground sm:inline-flex"
           >
-            <Github className="h-4 w-4" />
+            <Code2 className="h-4 w-4" />
             Contribute
           </a>
           <Button asChild size="sm" className="rounded-full">
@@ -188,7 +188,7 @@ function Landing() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <Github className="mr-1 h-4 w-4" />
+                  <Code2 className="mr-1 h-4 w-4" />
                   Contribute on GitHub
                 </a>
               </Button>
