@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Open source project using AI to find, listen to, and gently support people struggling with the mental health weight of the AI revolution.",
       },
       { name: "author", content: "Kindred community" },
-      { property: "og:title", content: "Kindred — open source AI companion" },
+      { property: "og:title", content: "Kindred — open source AI companion for the AI era" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Kindred — open source AI companion for the AI era" },
+      { name: "description", content: "Kindred is an open-source AI application designed to support mental well-being in the digital age." },
+      { property: "og:description", content: "Kindred is an open-source AI application designed to support mental well-being in the digital age." },
+      { name: "twitter:description", content: "Kindred is an open-source AI application designed to support mental well-being in the digital age." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/21310d12-9c88-465d-ad66-a1fe528f5fec/id-preview-99da5fc2--7391bde1-ca0c-4d5d-b8f7-e9409cc28d30.lovable.app-1780511285482.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/21310d12-9c88-465d-ad66-a1fe528f5fec/id-preview-99da5fc2--7391bde1-ca0c-4d5d-b8f7-e9409cc28d30.lovable.app-1780511285482.png" },
     ],
     links: [
       {
