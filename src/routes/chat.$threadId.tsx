@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Conversation,
   ConversationContent,
@@ -64,7 +65,18 @@ function ChatThreadInner({
   threadId: string;
   initialMessages: UIMessage[];
 }) {
-  const transport = useMemo(() => new DefaultChatTransport({ api: "/api/chat" }), []);
+  const transport = useMemo(
+    () =>
+      new DefaultChatTransport({
+        api: "/api/chat",
+        headers: async (): Promise<Record<string, string>> => {
+          const { data } = await supabase.auth.getSession();
+          const token = data.session?.access_token;
+          return token ? { Authorization: `Bearer ${token}` } : {};
+        },
+      }),
+    [],
+  );
   const { messages, sendMessage, status, error } = useChat({
     id: threadId,
     messages: initialMessages,
