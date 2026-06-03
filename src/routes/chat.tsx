@@ -25,13 +25,22 @@ function ChatLayout() {
   const navigate = useNavigate();
   const params = useParams({ strict: false }) as { threadId?: string };
   const activeId = params.threadId;
+  const { user, loading: authLoading } = useAuth();
 
   const [threads, setThreads] = useState<Thread[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
+  // Redirect to /auth if not signed in
+  useEffect(() => {
+    if (!authLoading && !user) {
+      navigate({ to: "/auth", replace: true });
+    }
+  }, [authLoading, user, navigate]);
+
   // Bootstrap (idempotent): load threads, create first if needed, navigate to "/" thread.
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (!user) return;
     const existing = loadThreads();
     let initial = existing;
     if (initial.length === 0) {
