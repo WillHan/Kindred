@@ -141,6 +141,7 @@ function ChatLayout() {
         </nav>
         <div className="border-t border-sidebar-border px-4 py-3">
           <KindredLogo />
+          <AuthFooter />
           <p className="mt-2 text-[10px] leading-relaxed text-muted-foreground">
             Kindred isn't a therapist. In crisis call 988 (US/CA) or 116 123 (UK).
           </p>
