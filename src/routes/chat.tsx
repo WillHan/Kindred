@@ -2,8 +2,10 @@ import { createFileRoute, Outlet, useNavigate, useParams, Link } from "@tanstack
 import { useCallback, useEffect, useState } from "react";
 import { KindredLogo } from "@/components/KindredLogo";
 import { Button } from "@/components/ui/button";
-import { Plus, Trash2, MessageCircle, ArrowLeft } from "lucide-react";
+import { Plus, Trash2, MessageCircle, ArrowLeft, LogOut, LogIn } from "lucide-react";
 import { loadThreads, saveThreads, newThreadId, type Thread } from "@/lib/chat-storage";
+import { useAuth } from "@/lib/use-auth";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/chat")({
   head: () => ({

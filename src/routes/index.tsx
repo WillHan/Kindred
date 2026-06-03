@@ -74,6 +74,9 @@ function Landing() {
             <Code2 className="h-4 w-4" />
             Contribute
           </a>
+          <Button asChild size="sm" variant="ghost" className="rounded-full">
+            <Link to="/auth">Sign in</Link>
+          </Button>
           <Button asChild size="sm" className="rounded-full">
             <Link to="/chat">Talk to Kindred</Link>
           </Button>
