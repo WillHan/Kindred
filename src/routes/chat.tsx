@@ -1,5 +1,5 @@
-import { createFileRoute, Outlet, useNavigate, useParams, useRouter, Link } from "@tanstack/react-router";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { createFileRoute, Outlet, useNavigate, useParams, Link } from "@tanstack/react-router";
+import { useCallback, useEffect, useState } from "react";
 import { KindredLogo } from "@/components/KindredLogo";
 import { Button } from "@/components/ui/button";
 import { Plus, Trash2, MessageCircle, ArrowLeft } from "lucide-react";
