@@ -1,0 +1,7 @@
+# Kindred
+
+> Open source AI companion for the mental health cost of the AI era. Four engines: outreach, conversation, support, reflection.
+
+## Pages
+- [Home](/): Mission, four engines, contributor call.
+- [Chat](/chat): Warm, non-clinical AI conversation. Private to the browser.
