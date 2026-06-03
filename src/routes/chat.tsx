@@ -160,3 +160,32 @@ function ChatLayout() {
     </div>
   );
 }
+
+function AuthFooter() {
+  const { user, loading } = useAuth();
+  if (loading) return null;
+  if (!user) {
+    return (
+      <Button asChild size="sm" variant="outline" className="mt-2 w-full justify-center rounded-lg">
+        <Link to="/auth">
+          <LogIn className="h-3.5 w-3.5" /> Sign in / Create account
+        </Link>
+      </Button>
+    );
+  }
+  return (
+    <div className="mt-2 flex items-center justify-between gap-2 rounded-lg bg-sidebar-accent/60 px-2 py-1.5">
+      <span className="truncate text-xs text-sidebar-foreground" title={user.email ?? ""}>
+        {user.email}
+      </span>
+      <button
+        type="button"
+        aria-label="Sign out"
+        onClick={() => supabase.auth.signOut()}
+        className="rounded p-1 text-muted-foreground hover:bg-background hover:text-foreground"
+      >
+        <LogOut className="h-3.5 w-3.5" />
+      </button>
+    </div>
+  );
+}
