@@ -1,10 +1,39 @@
-The AI revolution is changing how we feel.
-No one should face it alone.
-Kindred is an open project using AI for the opposite of what's scaring us — to notice the people quietly drowning, listen without judgment, and walk with them toward something a little lighter.
+# Kindred
 
-See a demo at https://kindred.mygoodcommonsense.com/
+The AI revolution is changing how we feel. No one should face it alone.
 
-The Problem: The Hidden Crisis of AI Job Displacement Start your description by validating the very real psychological and economic crisis workers are facing. The Context: We are experiencing an "occupational identity crisis" as AI reshapes industries and the way people define purpose in their careers . The Psychological Toll: Workers whose skills are being automated are suffering from "AI Replacement Dysfunction" (AIRD)—a condition characterized by anxiety, insomnia, loss of identity, and feelings of worthlessness . Tech professionals, in particular, are experiencing "Identity Grief" as they watch their core skills become automated faster than they can adapt . The Institutional Gap: Currently, there is no established cultural vocabulary, HR framework, or institutional support structure designed to handle this specific type of AI-driven displacement .
-Our Mission Statement: Kindred is a community-driven, open-source initiative that leverages AI to proactively identify workers suffering from AI-induced displacement and deliver customized, psychological, and economic mitigation plans to help them transition into the post-labor economy.
+Kindred is an open, non-profit project. We use AI for the opposite of what scares us — to notice people who feel left behind by AI, listen to them without judgment, and gently point them toward real help.
 
-Core Features & How It Works Detail the two primary ways your project will use AI, incorporating concepts from the research. Phase 1: Proactive AI Outreach Targeting the Vulnerable: Our AI outreach agents will identify and connect with individuals facing "serial job loss and chronic uncertainty" . This includes workers in highly exposed cognitive and administrative roles (like customer service, translation, and routine programming) . Empathetic Engagement: Because many workers interpret job loss as the universe telling them they are "no longer needed" , our AI outreach will be trained to act thoughtfully and empathetically, initiating conversations that provide immediate validation and support . Phase 2: Customized Mitigation & Recovery Plans Once connected, the AI will generate personalized recovery roadmaps focusing on three pillars: Psychological Resilience & Cognitive Flexibility: The AI will use frameworks like the Cognitive Flexibility Inventory (CFI) to assess and help users develop two key skills: the ability to generate alternative explanations/solutions (Alternatives subscale) and the confidence to overcome difficulties (Control subscale) . The mitigation plan will focus on building Self-Concept Clarity, helping users decouple their personal identity from their specific job titles so they are less vulnerable to market disruptions . Strategic Upskilling & Preventing Atrophy: The AI will guide users toward "reinstatement" roles—tasks where humans still have a comparative advantage over machines, such as roles requiring emotional intelligence, physical dexterity, and complex human interaction . It will also provide mental exercises to prevent "cognitive offloading" (the tendency to let AI do the thinking, which leads to cognitive atrophy and weaker analytical abilities) . Economic Transition Strategy: For long-term mitigation, the platform will educate and connect users with emerging economic survival models, such as fractional ownership in AI systems, labor tokenization (where workers earn micro-royalties for their training data), or advocacy for Universal Basic Compute (UBC) .
+**Live demo:** https://kindred.mygoodcommonsense.com/
+
+## Who this is for
+People hurt by AI job loss and the "what is my purpose now" feeling that comes with it — anxiety, lost identity, isolation. Many try for a while, then go quiet. Today, no system is built to notice them early.
+
+## What Kindred is
+- A safe, **opt-in** first point of contact. People come to us — we don't hunt anyone down.
+- AI that helps us **listen**, respond with care, and point people to real, human help.
+- A **non-profit, open-source** public good — built for the people no company can make money from.
+
+## What Kindred is NOT
+- ❌ Not therapy. Not a diagnosis. Not a clinician.
+- ❌ Not a crisis service. If someone is in danger, we route them straight to professional crisis help (**9-8-8** in Canada/US) and a real human.
+- ❌ Not surveillance. We do not secretly score, target, or report anyone.
+
+## How it works (kept simple)
+1. **Feeling-first content** — short videos that name the feeling, so people know they're not alone.
+2. **A quiet place to land** — an optional, low-pressure space where AI listens and a trained human stays in the loop.
+3. **A bridge, not a wall** — we help people find the next real step: resources, community, professional help.
+
+## Safety first
+Kindred follows a clear safety posture: opt-in, anonymous by default, human-in-the-loop, and crisis-*routing* only (never crisis triage). Read it here → [SAFETY.md](./SAFETY.md)
+
+## Status
+Early. We are running one small, honest test: *can caring, AI-made content reach people who have gone quiet — and get a few to take one small step toward help?* If it doesn't work, we change it fast.
+
+## Background
+The fuller write-up of the problem and thinking lives in [VISION.md](./VISION.md).
+
+## Help wanted
+Marketers, mental-health professionals, researchers, and people with lived experience. If this is you, open an issue.
+
+— A non-profit project by Willy. Built in the open.
