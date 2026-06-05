@@ -19,10 +19,32 @@ People hurt by AI job loss and the "what is my purpose now" feeling that comes w
 - ❌ Not a crisis service. If someone is in danger, we route them straight to professional crisis help (**9-8-8** in Canada/US) and a real human.
 - ❌ Not surveillance. We do not secretly score, target, or report anyone.
 
-## How it works (kept simple)
-1. **Feeling-first content** — short videos and music that name the feeling, so people know they're not alone.
-2. **A quiet place to land** — an optional, low-pressure space where AI listens and a trained human stays in the loop.
-3. **A bridge, not a wall** — we help people find the next real step: resources, community, professional help.
+## How it works — a self-evolving loop
+Kindred is one engine that gets better every cycle at reaching the quiet.
+
+```
+Persona        →  who we reach (e.g. laid-off dev, 3am, ashamed)
+Study platform →  how to land in their feed (work WITH the platform)
+AI writes script →  name the feeling, no lecture
+AI makes short video
+🧑 Human review →  safe? true? kind?
+Release
+Listen         →  loud signal = views/shares (reach only)
+                  REAL signal = a silent step
+                  (watch-to-end → click → land on a quiet page → 1 private note)
+Revise         →  better persona · better feeling · better hook
+🔁 loop        →  every cycle = better at reaching the quiet
+```
+
+**The point:** the engine doesn't learn *"what's popular."* It learns *"what reaches the quiet and moves them one inch."*
+
+Think of it as a **lighthouse** 🌊 — we don't measure how bright the light is (views). We measure whether a ship reached the **harbor** (a real person took one small step toward help).
+
+Two locks:
+- 🧑 **Human review stays in the loop forever** — our safety and our taste. Never automated away.
+- 🤝 **Work with platforms for reach, but the scoreboard is ours, not theirs.** We never monitor, track, or target anyone — people come to us.
+
+Then: **a quiet place to land** (AI listens, human in the loop) → **a bridge, not a wall** (real next step: resources, community, professional help).
 
 ## The bigger picture — a movement
 The hard part of AI job loss is the slide most people go through alone: **stress → anxiety → depression.** Kindred's idea is to meet people *early* in that slide and help them prepare, before it deepens.

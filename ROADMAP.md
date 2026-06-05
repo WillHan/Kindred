@@ -10,6 +10,22 @@ The hard part of AI job loss is a slide people go through alone: **stress → an
 2. **Kindred (the place to land)** — an opt-in, AI-assisted, human-in-the-loop space that listens and points to real help. Never therapy, never diagnosis. See [SAFETY.md](./SAFETY.md).
 3. **Non-profit (what makes it last)** — AI-first keeps support cheap; non-profit means we serve the people no company can make money from.
 
+## The engine — a self-evolving loop
+The front door isn't a one-off. It's a loop that gets better every cycle at reaching the quiet.
+
+```
+Persona  →  Study platform  →  AI writes script  →  AI makes short video
+   →  🧑 Human review  →  Release  →  Listen  →  Revise  →  🔁 loop
+```
+
+Listen = two signals:
+- **loud** = views / shares → *reach only, never the goal*
+- **REAL** = a silent step → watch-to-end → click → land on a quiet page → 1 private note
+
+**Rule:** study the algorithm to get *shown*; never let it decide *success*. It's a **lighthouse** 🌊 — we don't grade the brightness (views), we grade whether a ship reached the **harbor** (one real step toward help).
+
+Two locks: 🧑 human review never leaves the loop · 🤝 work with platforms for reach, but the scoreboard stays ours. We never monitor, track, or target anyone — people come to us.
+
 ## Now — the fail-fast test (2 weeks, ~$0)
 **Question:** Can caring, AI-made content reach people who have gone quiet — and get a few to take one small step?
 
