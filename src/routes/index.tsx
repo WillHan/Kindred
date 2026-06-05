@@ -35,9 +35,9 @@ export const Route = createFileRoute("/")({
 const ENGINES = [
   {
     icon: Radar,
-    title: "Outreach",
-    subtitle: "Find people who need a hand",
-    body: "Quietly monitor public signals on social platforms — never DMs, never scraping private data. When someone publicly expresses distress, surface resources, not solicitations.",
+    title: "Reach",
+    subtitle: "Meet people where they already are",
+    body: "We never monitor, track, or scan anyone. Kindred shares feeling-first videos and music about what AI is doing to work and identity. People who recognize themselves choose to come to us — anonymously, on their own terms.",
   },
   {
     icon: MessageCircleHeart,
