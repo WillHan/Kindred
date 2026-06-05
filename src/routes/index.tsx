@@ -35,9 +35,9 @@ export const Route = createFileRoute("/")({
 const ENGINES = [
   {
     icon: Radar,
-    title: "Outreach",
-    subtitle: "Find people who need a hand",
-    body: "Quietly monitor public signals on social platforms — never DMs, never scraping private data. When someone publicly expresses distress, surface resources, not solicitations.",
+    title: "Reach",
+    subtitle: "Meet people where they already are",
+    body: "We never monitor, track, or scan anyone. Kindred shares feeling-first videos and music about what AI is doing to work and identity. People who recognize themselves choose to come to us — anonymously, on their own terms.",
   },
   {
     icon: MessageCircleHeart,
@@ -96,8 +96,9 @@ function Landing() {
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-balance text-lg text-muted-foreground">
             Kindred is an open project using AI for the opposite of what's
-            scaring us — to notice the people quietly drowning, listen without
-            judgment, and walk with them toward something a little lighter.
+            scaring us — to reach people who feel left behind by AI, listen
+            without judgment, and walk with them toward something a little
+            lighter.
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg" className="rounded-full px-6">
