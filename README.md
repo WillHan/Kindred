@@ -45,11 +45,16 @@ Early and active. We are running one small, honest test: *can caring, AI-made co
 The fuller write-up of the problem and thinking lives in [VISION.md](./VISION.md).
 
 ## A personal note from Willy
-I've spent more than 20 years quietly supporting people through mental-health struggles — not as a professional, just as the person they let in. I've watched how it starts small and, left alone, can become permanent.
+I used to think I was building businesses. I wasn't. Looking back, I've spent most of my life doing one thing — for free, by instinct: sitting with people in their hardest moments. Friends losing jobs. People going through brutal divorces. Kids falling apart at school. Families carrying ADHD, illness, and trauma. No one assigned me this. It's just where my time goes.
 
-I recently lost my own job, so I know the fear of providing for a family while the ground shifts under you. That's not a reason to stop — it's the reason I care. I started making short videos about the *feeling* of all this; one reached around 1,400 people, almost all of them silent. Then I made an album to give people a bit of strength. Every path I've taken keeps pointing at the same thing: helping people get ready for what AI is doing to work and to how we feel.
+When I connected the dots, every project I'd made turned out to be the same project wearing different clothes:
+- **[No Pain No Joke](https://www.nopainnojoke.com/)** — turn your pain into a joke until you laugh. It dramatically cut my own "spiral time."
+- **[mycoolself](https://mycoolself.com/)** ([music](https://mycoolself.com/music/)) — music to clear the mind and stay motivated on something that matters.
+- **[NoPainNoJokeTV](https://www.youtube.com/@NoPainNoJokeTV)** and the album — giving people a little strength for what AI is doing to work and identity.
 
-Kindred is me trying to turn that into something real and lasting — in the open, so anyone can help or check our work.
+Same taste. Same aim. I built the first versions on myself, and they worked on me — that's my first proof.
+
+I recently lost my own job, so I know the fear of providing for a family while the ground shifts under you. That's not a reason to stop — it's the reason I care. I'm at a fork: take another job, or do this. I chose this. I've found my meaning, and I can do it forever. Kindred is me turning that into something real and lasting — in the open, so anyone can help or check our work.
 
 ## Help wanted
 Marketers, mental-health professionals, researchers, musicians, and people with lived experience. If this is you, open an issue.
