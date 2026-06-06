@@ -32,13 +32,19 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
+const LOOP_STEPS = [
+  "Persona",
+  "Study platform",
+  "AI writes script",
+  "AI makes short video",
+  "🧑 Human review",
+  "Release",
+  "Listen",
+  "Revise",
+  "🔁 back to Persona",
+];
+
 const ENGINES = [
-  {
-    icon: Radar,
-    title: "Reach",
-    subtitle: "Meet people where they already are",
-    body: "We never monitor, track, or scan anyone. Kindred shares feeling-first videos and music about what AI is doing to work and identity. People who recognize themselves choose to come to us — anonymously, on their own terms.",
-  },
   {
     icon: MessageCircleHeart,
     title: "Conversation",
@@ -138,12 +144,59 @@ function Landing() {
         >
           <div className="mb-12 max-w-2xl">
             <p className="mb-3 text-sm uppercase tracking-widest text-accent">
-              Four engines, one circle
+              The loop + what happens when they land
             </p>
             <h2 className="font-serif text-4xl text-foreground sm:text-5xl">
               Care, designed as a system that learns from being cared for.
             </h2>
           </div>
+
+          <article className="mb-8 overflow-hidden rounded-3xl border border-border bg-card p-7 sm:p-9">
+            <div className="mb-5 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-primary">
+                <Radar className="h-5 w-5" />
+              </div>
+              <div className="font-mono text-xs text-muted-foreground">00</div>
+            </div>
+            <h3 className="font-serif text-2xl text-foreground">
+              How we reach people — a self-evolving loop
+            </h3>
+            <p className="mt-1 text-sm font-medium text-accent">
+              People come to us. We never monitor or target anyone.
+            </p>
+
+            <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-3">
+              {LOOP_STEPS.map((step, i) => (
+                <span key={step} className="flex items-center gap-2">
+                  <span className="rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground">
+                    {step}
+                  </span>
+                  {i < LOOP_STEPS.length - 1 && (
+                    <span className="text-accent">→</span>
+                  )}
+                </span>
+              ))}
+            </div>
+
+            <ul className="mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
+              <li>
+                <span className="font-medium text-foreground">Listen = two signals.</span>{" "}
+                Loud = views/shares (reach only). REAL = a silent step:
+                watch-to-end → click → land on a quiet page → one private note.
+              </li>
+              <li>
+                We study platforms to get shown — we never let them decide
+                success. Like a lighthouse: we don't grade how bright the light
+                is (views), we grade whether a ship reached the harbor (one
+                real step toward help).
+              </li>
+              <li>
+                We never monitor, track, or target anyone. People come to us. A
+                human reviews every video before release.
+              </li>
+            </ul>
+          </article>
+
           <div className="grid gap-5 sm:grid-cols-2">
             {ENGINES.map((e, i) => {
               const Icon = e.icon;
