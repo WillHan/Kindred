@@ -32,13 +32,19 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
+const LOOP_STEPS = [
+  "Persona",
+  "Study platform",
+  "AI writes script",
+  "AI makes short video",
+  "🧑 Human review",
+  "Release",
+  "Listen",
+  "Revise",
+  "🔁 back to Persona",
+];
+
 const ENGINES = [
-  {
-    icon: Radar,
-    title: "Reach",
-    subtitle: "Meet people where they already are",
-    body: "We never monitor, track, or scan anyone. Kindred shares feeling-first videos and music about what AI is doing to work and identity. People who recognize themselves choose to come to us — anonymously, on their own terms.",
-  },
   {
     icon: MessageCircleHeart,
     title: "Conversation",
