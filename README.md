@@ -48,6 +48,19 @@ Two locks:
 
 Then: **a quiet place to land** (AI listens, human in the loop) → **a bridge, not a wall** (real next step: resources, community, professional help).
 
+## How we're different
+Most mental-health tools wait for you to come to them — download an app, book a session, text a line. Kindred goes the other way: we make content that reaches people who've gone quiet, and let them come on their own terms.
+
+| Most tools | Kindred |
+|---|---|
+| Wait for you to ask (inbound) | Reach people who never ask |
+| Paid app, or sold to your employer | Free to the person — always |
+| For-profit subscription | Non-profit, open-source |
+| General wellness | Built for the AI job-loss moment |
+| AI talks *to* you | AI **+ a human**, who stays in the loop |
+
+We learn from the best of this world — the free non-profits proving you can meet people where they already are — and we're built to avoid its worst: AI "companions" with no guardrails. Not therapy. Not surveillance. People come to us.
+
 ## The bigger picture — a movement
 The hard part of AI job loss is the slide most people go through alone: **stress → anxiety → depression.** Kindred's idea is to meet people *early* in that slide and help them prepare, before it deepens.
 
