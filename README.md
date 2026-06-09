@@ -1,5 +1,7 @@
 # Kindred
 
+> ## You don't have to speak to be heard.
+
 The AI revolution is changing how we feel. No one should face it alone.
 
 Kindred is an open, non-profit project. We use AI for the opposite of what scares us — to notice people who feel left behind by AI, listen to them without judgment, and gently point them toward real help.
