@@ -319,6 +319,12 @@ function Landing() {
             >
               AI anxiety guide
             </Link>
+            <Link
+              to="/support"
+              className="underline underline-offset-2 hover:text-foreground"
+            >
+              Support
+            </Link>
             <span>
               In crisis? Call 988 (US/CA) · 116 123 (UK) ·{" "}
               <a
