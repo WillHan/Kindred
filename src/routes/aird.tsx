@@ -33,7 +33,7 @@ export const Route = createFileRoute("/aird")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "AIRD — what it is, and what actually helps",
+          headline: "AIRD (AI Replacement Dysfunction) — what it is, and what actually helps",
           description:
             "AIRD (AI Replacement Dysfunction): what it is, what it feels like, and simple, non-clinical things that help.",
           author: { "@type": "Organization", name: "Kindred" },
