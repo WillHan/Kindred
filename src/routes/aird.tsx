@@ -6,20 +6,20 @@ import { ArrowRight, LifeBuoy } from "lucide-react";
 export const Route = createFileRoute("/aird")({
   head: () => ({
     meta: [
-      { title: "AIRD — what it is, and what actually helps" },
+      { title: "AIRD (AI Replacement Dysfunction) — what it is & what helps" },
       {
         name: "description",
         content:
-          "AIRD (AI Replacement Dysfunction): what it is, what it feels like, and simple, non-clinical things that help.",
+          "AIRD — AI Replacement Dysfunction — explained: what AIRD is, what AI Replacement Dysfunction feels like, and simple, non-clinical things that help.",
       },
       {
         property: "og:title",
-        content: "AIRD — what it is, and what actually helps",
+        content: "AIRD (AI Replacement Dysfunction) — what it is & what helps",
       },
       {
         property: "og:description",
         content:
-          "A name for the anxiety and lost identity people feel as AI threatens their work — and gentle, human steps that help.",
+          "AIRD (AI Replacement Dysfunction): a name for the anxiety and lost identity people feel as AI threatens their work — and gentle, human steps that help.",
       },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "https://kindred.mygoodcommonsense.com/aird" },
