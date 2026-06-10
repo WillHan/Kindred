@@ -21,6 +21,57 @@ export const Route = createFileRoute("/aird")({
         content:
           "A name for the anxiety and lost identity people feel as AI threatens their work — and gentle, human steps that help.",
       },
+      { property: "og:type", content: "article" },
+      { property: "og:url", content: "https://kindred.mygoodcommonsense.com/aird" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://kindred.mygoodcommonsense.com/aird" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "AIRD — what it is, and what actually helps",
+          description:
+            "AIRD (AI Replacement Dysfunction): what it is, what it feels like, and simple, non-clinical things that help.",
+          author: { "@type": "Organization", name: "Kindred" },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What is AIRD?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "AIRD (AI Replacement Dysfunction) is a term coined in 2025 by University of Florida researchers (McNamara & Thornton) for the stress and lost identity people feel as AI replaces or threatens their work. The fear and uncertainty alone are enough to cause strain.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What does AIRD feel like?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Anxiety, trouble sleeping, a racing 'what now' mind; feeling useless or unneeded; losing a sense of who you are when the work goes; pulling away from people.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What actually helps with AIRD?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Name it. Know you're not alone. Take one small step today. Tell one person. Talk to a professional if it's heavy.",
+              },
+            },
+          ],
+        }),
+      },
     ],
   }),
   component: AirdPage,

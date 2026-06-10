@@ -14,7 +14,7 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kindred — open source AI companion for the mental cost of AI" },
+      { title: "Kindred — open source AI companion" },
       {
         name: "description",
         content:
@@ -27,6 +27,32 @@ export const Route = createFileRoute("/")({
           "Outreach. Conversation. Support. Reflection. Four engines, fully open source, built so no one navigates the AI era alone.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://kindred.mygoodcommonsense.com/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://kindred.mygoodcommonsense.com/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Kindred",
+          url: "https://kindred.mygoodcommonsense.com/",
+          description:
+            "Open source, non-clinical AI companion for the mental health cost of the AI era.",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Kindred",
+          url: "https://kindred.mygoodcommonsense.com/",
+        }),
+      },
     ],
   }),
   component: Landing,
