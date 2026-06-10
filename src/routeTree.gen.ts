@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SupportRouteImport } from './routes/support'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ChatRouteImport } from './routes/chat'
 import { Route as AuthRouteImport } from './routes/auth'
@@ -18,6 +19,11 @@ import { Route as ChatThreadIdRouteImport } from './routes/chat.$threadId'
 import { Route as BlogAiAnxietyGuideRouteImport } from './routes/blog.ai-anxiety-guide'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/support': typeof SupportRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/ai-anxiety-guide': typeof BlogAiAnxietyGuideRoute
   '/chat/$threadId': typeof ChatThreadIdRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/support': typeof SupportRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/ai-anxiety-guide': typeof BlogAiAnxietyGuideRoute
   '/chat/$threadId': typeof ChatThreadIdRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/support': typeof SupportRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/ai-anxiety-guide': typeof BlogAiAnxietyGuideRoute
   '/chat/$threadId': typeof ChatThreadIdRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/chat'
     | '/sitemap.xml'
+    | '/support'
     | '/api/chat'
     | '/blog/ai-anxiety-guide'
     | '/chat/$threadId'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/chat'
     | '/sitemap.xml'
+    | '/support'
     | '/api/chat'
     | '/blog/ai-anxiety-guide'
     | '/chat/$threadId'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/chat'
     | '/sitemap.xml'
+    | '/support'
     | '/api/chat'
     | '/blog/ai-anxiety-guide'
     | '/chat/$threadId'
@@ -129,12 +141,20 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   ChatRoute: typeof ChatRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SupportRoute: typeof SupportRoute
   ApiChatRoute: typeof ApiChatRoute
   BlogAiAnxietyGuideRoute: typeof BlogAiAnxietyGuideRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -210,9 +230,20 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   ChatRoute: ChatRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SupportRoute: SupportRoute,
   ApiChatRoute: ApiChatRoute,
   BlogAiAnxietyGuideRoute: BlogAiAnxietyGuideRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
