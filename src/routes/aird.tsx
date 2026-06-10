@@ -113,7 +113,7 @@ function AirdPage() {
 
         <section className="mt-12">
           <h2 className="font-serif text-2xl text-foreground sm:text-3xl">
-            What is AIRD?
+            What is AIRD (AI Replacement Dysfunction)?
           </h2>
           <p className="mt-3 leading-relaxed text-muted-foreground">
             AIRD (AI Replacement Dysfunction) is a term coined in 2025 by
