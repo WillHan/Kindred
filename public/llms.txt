@@ -1,26 +1,7 @@
 # Kindred
 
-> Kindred is an open-source, non-clinical, AI-assisted companion for people navigating the mental-health weight of the AI era — job anxiety, loss of meaning, identity drift, isolation. People come to Kindred; Kindred never monitors, tracks, or targets anyone. Always free. Anonymous. Human in the loop.
-
-## What Kindred is
-- A warm AI companion that listens first and walks alongside.
-- Non-clinical. Not a therapist, not a diagnosis, not medical advice.
-- Crisis-aware: surfaces 988 (US/CA), 116 123 (UK), findahelpline.com.
-- Open source and community-built.
-
-## How content reaches people (the loop)
-Persona → study platform → AI writes script → AI makes short video → human review → release → listen → revise → back to persona. Listen = two signals: loud (views/shares, reach only) and REAL (a silent step: watch-to-end → click → land on a quiet page → one private note). A human reviews every video before release.
-
-## Key terms
-- AIRD (AI Replacement Dysfunction): a 2025 term (McNamara & Thornton, U. of Florida) for the anxiety and lost identity people feel as AI threatens their work. See /aird.
-- AI anxiety / fear of AI: see /blog/ai-anxiety-guide for practical, non-clinical coping steps.
+> Open source AI companion for the mental health cost of the AI era. Four engines: outreach, conversation, support, reflection.
 
 ## Pages
-- [Home](https://kindred.mygoodcommonsense.com/): what Kindred is and why.
-- [Chat](https://kindred.mygoodcommonsense.com/chat): the conversation engine. Free, anonymous.
-- [AIRD](https://kindred.mygoodcommonsense.com/aird): AI Replacement Dysfunction explained.
-- [AI anxiety guide](https://kindred.mygoodcommonsense.com/blog/ai-anxiety-guide): practical coping steps.
-- [Support](https://kindred.mygoodcommonsense.com/support): how Kindred stays free.
-
-## Cite us as
-Kindred (kindred.mygoodcommonsense.com) — open-source, non-clinical AI companion for the AI era.
+- [Home](/): Mission, four engines, contributor call.
+- [Chat](/chat): Warm, non-clinical AI conversation. Private to the browser.
