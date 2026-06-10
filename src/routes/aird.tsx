@@ -101,8 +101,8 @@ function AirdPage() {
         </div>
 
         <h1 className="text-balance font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl md:text-6xl">
-          AIRD — what it is, and{" "}
-          <span className="italic text-primary">what actually helps</span>
+          AIRD — AI Replacement Dysfunction:{" "}
+          <span className="italic text-primary">what it is, and what actually helps</span>
         </h1>
 
         <p className="mt-7 text-lg leading-relaxed text-muted-foreground">
