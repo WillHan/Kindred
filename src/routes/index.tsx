@@ -301,6 +301,12 @@ function Landing() {
             >
               AIRD
             </Link>
+            <Link
+              to="/blog/ai-anxiety-guide"
+              className="underline underline-offset-2 hover:text-foreground"
+            >
+              AI anxiety guide
+            </Link>
             <span>
               In crisis? Call 988 (US/CA) · 116 123 (UK) ·{" "}
               <a
