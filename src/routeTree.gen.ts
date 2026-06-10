@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ChatRouteImport } from './routes/chat'
 import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AirdRouteImport } from './routes/aird'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ChatThreadIdRouteImport } from './routes/chat.$threadId'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -29,6 +30,11 @@ const ChatRoute = ChatRouteImport.update({
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AirdRoute = AirdRouteImport.update({
+  id: '/aird',
+  path: '/aird',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -49,6 +55,7 @@ const ApiChatRoute = ApiChatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aird': typeof AirdRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aird': typeof AirdRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aird': typeof AirdRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -76,16 +85,25 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/aird'
     | '/auth'
     | '/chat'
     | '/sitemap.xml'
     | '/api/chat'
     | '/chat/$threadId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/chat' | '/sitemap.xml' | '/api/chat' | '/chat/$threadId'
+  to:
+    | '/'
+    | '/aird'
+    | '/auth'
+    | '/chat'
+    | '/sitemap.xml'
+    | '/api/chat'
+    | '/chat/$threadId'
   id:
     | '__root__'
     | '/'
+    | '/aird'
     | '/auth'
     | '/chat'
     | '/sitemap.xml'
@@ -95,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AirdRoute: typeof AirdRoute
   AuthRoute: typeof AuthRoute
   ChatRoute: typeof ChatRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -122,6 +141,13 @@ declare module '@tanstack/react-router' {
       path: '/auth'
       fullPath: '/auth'
       preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aird': {
+      id: '/aird'
+      path: '/aird'
+      fullPath: '/aird'
+      preLoaderRoute: typeof AirdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -160,6 +186,7 @@ const ChatRouteWithChildren = ChatRoute._addFileChildren(ChatRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AirdRoute: AirdRoute,
   AuthRoute: AuthRoute,
   ChatRoute: ChatRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

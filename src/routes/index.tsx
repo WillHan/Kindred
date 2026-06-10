@@ -268,17 +268,25 @@ function Landing() {
             © {new Date().getFullYear()} Kindred · A community project, not
             medical care.
           </span>
-          <span>
-            In crisis? Call 988 (US/CA) · 116 123 (UK) ·{" "}
-            <a
-              className="underline underline-offset-2"
-              href="https://findahelpline.com"
-              target="_blank"
-              rel="noreferrer noopener"
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              to="/aird"
+              className="underline underline-offset-2 hover:text-foreground"
             >
-              findahelpline.com
-            </a>
-          </span>
+              AIRD
+            </Link>
+            <span>
+              In crisis? Call 988 (US/CA) · 116 123 (UK) ·{" "}
+              <a
+                className="underline underline-offset-2"
+                href="https://findahelpline.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                findahelpline.com
+              </a>
+            </span>
+          </div>
         </div>
       </footer>
     </div>
