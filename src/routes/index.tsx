@@ -1,15 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { KindredLogo } from "@/components/KindredLogo";
 import { Button } from "@/components/ui/button";
-import {
-  Sparkles,
-  Radar,
-  MessageCircleHeart,
-  Compass,
-  RotateCcw,
-  Code2,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import logo from "@/assets/kindred-logo.png.asset.json";
+
+const FAQ = [
+  {
+    q: "What is Kindred?",
+    a: "Kindred is an open-source, non-clinical AI companion for people feeling the emotional weight of the AI era — job anxiety, lost meaning, identity drift. It listens first and walks alongside. It's not a therapist.",
+  },
+  {
+    q: "Is Kindred free?",
+    a: "Yes. Always free, anonymous, no sign-up needed to start a conversation. It's funded by people who care, not by you.",
+  },
+  {
+    q: "Does Kindred track or monitor anyone?",
+    a: "No. Kindred never monitors, tracks, or targets anyone. People come to Kindred. A human reviews every piece of outreach content before release.",
+  },
+  {
+    q: "Is Kindred a therapist or medical advice?",
+    a: "No. Kindred is non-clinical and never claims to be a therapist. If things feel heavy: in the US/Canada call or text 988, UK 116 123, or visit findahelpline.com.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,13 +30,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "An open source project using AI to reach, listen to, and gently support people struggling with the emotional weight of the AI era.",
+          "Kindred is a free, anonymous, non-clinical AI companion for the emotional weight of the AI era. Open source. Human in the loop. People come to us — we never track or target anyone.",
       },
       { property: "og:title", content: "Kindred — open source AI companion" },
       {
         property: "og:description",
         content:
-          "Outreach. Conversation. Support. Reflection. Four engines, fully open source, built so no one navigates the AI era alone.",
+          "Free, anonymous, non-clinical AI companion for the AI era. Open source. Human in the loop.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://kindred.mygoodcommonsense.com/" },
@@ -41,7 +53,7 @@ export const Route = createFileRoute("/")({
           name: "Kindred",
           url: "https://kindred.mygoodcommonsense.com/",
           description:
-            "Open source, non-clinical AI companion for the mental health cost of the AI era.",
+            "Open source, non-clinical AI companion for the mental health weight of the AI era. Free, anonymous, human in the loop.",
         }),
       },
       {
@@ -53,59 +65,29 @@ export const Route = createFileRoute("/")({
           url: "https://kindred.mygoodcommonsense.com/",
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQ.map(({ q, a }) => ({
+            "@type": "Question",
+            name: q,
+            acceptedAnswer: { "@type": "Answer", text: a },
+          })),
+        }),
+      },
     ],
   }),
   component: Landing,
 });
 
-const LOOP_STEPS = [
-  "Persona",
-  "Study platform",
-  "AI writes script",
-  "AI makes short video",
-  "🧑 Human review",
-  "Release",
-  "Listen",
-  "Revise",
-  "🔁 back to Persona",
-];
-
-const ENGINES = [
-  {
-    icon: MessageCircleHeart,
-    title: "Conversation",
-    subtitle: "Meet them where they are",
-    body: "A warm, non-clinical AI companion that listens first, validates, and walks alongside — not above. Safe defaults, crisis-aware, never claims to be a therapist.",
-  },
-  {
-    icon: Compass,
-    title: "Support",
-    subtitle: "One small step at a time",
-    body: "Customized, evidence-informed next steps — a grounding exercise, a journal prompt, a community to find, a hotline when needed. Ongoing, gentle, opt-in.",
-  },
-  {
-    icon: RotateCcw,
-    title: "Reflection",
-    subtitle: "Learn, with consent",
-    body: "Anonymous, opt-in feedback teaches the system what actually helps — so outreach, conversation, and support get kinder and more useful over time.",
-  },
-];
-
 function Landing() {
   return (
     <div className="min-h-screen bg-paper">
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+      <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
         <KindredLogo />
-        <div className="flex items-center gap-2">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="hidden items-center gap-2 text-sm text-muted-foreground hover:text-foreground sm:inline-flex"
-          >
-            <Code2 className="h-4 w-4" />
-            Contribute
-          </a>
+        <div className="flex items-center gap-1">
           <Button asChild size="sm" variant="ghost" className="rounded-full">
             <Link to="/auth">Sign in</Link>
           </Button>
@@ -116,51 +98,98 @@ function Landing() {
       </header>
 
       <main>
-        <section className="mx-auto max-w-4xl px-6 pb-24 pt-16 text-center sm:pt-24">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs text-muted-foreground backdrop-blur">
-            <Sparkles className="h-3 w-3 text-accent" />
-            Open source · community-built · non-clinical
-          </div>
-          <h1 className="text-balance font-serif text-5xl leading-[1.05] text-foreground sm:text-6xl md:text-7xl">
+        {/* Hero — quiet, lots of breathing room */}
+        <section className="mx-auto max-w-3xl px-6 pb-20 pt-20 text-center sm:pt-28">
+          <img
+            src={logo.url}
+            alt=""
+            className="mx-auto mb-8 h-24 w-24 rounded-full object-cover opacity-95"
+            loading="eager"
+          />
+          <h1 className="text-balance font-serif text-5xl leading-[1.05] text-foreground sm:text-6xl">
             The AI revolution is changing how we feel.
             <br />
-            <span className="italic text-primary">No one should face it alone.</span>
+            <span className="italic text-primary">
+              No one should face it alone.
+            </span>
           </h1>
-          <p className="mx-auto mt-7 max-w-2xl text-balance text-lg text-muted-foreground">
-            Kindred is an open project using AI for the opposite of what's
-            scaring us — to reach people who feel left behind by AI, listen
-            without judgment, and walk with them toward something a little
-            lighter.
+          <p className="mx-auto mt-7 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground">
+            A quiet place to land. Talk to Kindred — a warm, non-clinical
+            companion for the weight of the AI era.
           </p>
+
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Button asChild size="lg" className="rounded-full px-6">
+            <Button asChild size="lg" className="rounded-full px-7">
               <Link to="/chat">
                 Start a conversation
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="rounded-full px-6"
-            >
-              <a href="#engines">See how it works</a>
-            </Button>
           </div>
-          <p className="mt-5 text-sm font-medium text-foreground">
+          <p className="mt-5 text-sm text-muted-foreground">
             Free · anonymous · no sign-up needed
           </p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Always free for you — funded by people who care, not by you.{" "}
+          <p className="mt-1 text-xs text-muted-foreground">
+            Funded by people who care, not by you ·{" "}
             <Link
               to="/support"
               className="underline underline-offset-2 hover:text-foreground"
             >
-              Support Kindred
+              support Kindred
             </Link>
           </p>
-          <p className="mt-6 text-xs text-muted-foreground">
+        </section>
+
+        {/* Soft "what this is" prose — replaces the busy engines/cards */}
+        <section className="mx-auto max-w-2xl px-6 pb-20 text-center">
+          <p className="font-serif text-2xl leading-relaxed text-foreground sm:text-3xl">
+            People come to us. We never track or target anyone.
+          </p>
+          <p className="mt-6 leading-relaxed text-muted-foreground">
+            Kindred is open source and built by hand. A human reviews every
+            piece of outreach we share. When someone arrives, the conversation
+            is warm, unhurried, and never pretends to be a therapist. If things
+            feel heavy, we point — gently — to real help.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm">
+            <Link
+              to="/aird"
+              className="underline underline-offset-2 text-muted-foreground hover:text-foreground"
+            >
+              What is AIRD?
+            </Link>
+            <span className="text-muted-foreground/40">·</span>
+            <Link
+              to="/blog/ai-anxiety-guide"
+              className="underline underline-offset-2 text-muted-foreground hover:text-foreground"
+            >
+              AI anxiety guide
+            </Link>
+          </div>
+        </section>
+
+        {/* FAQ — for humans and for LLMs (GEO) */}
+        <section className="mx-auto max-w-2xl px-6 pb-24">
+          <h2 className="mb-8 font-serif text-3xl text-foreground">
+            Questions, answered plainly
+          </h2>
+          <div className="space-y-7">
+            {FAQ.map((item) => (
+              <div key={item.q}>
+                <h3 className="font-serif text-xl text-foreground">
+                  {item.q}
+                </h3>
+                <p className="mt-2 leading-relaxed text-muted-foreground">
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Crisis line — subtle band */}
+        <section className="mx-auto max-w-2xl px-6 pb-24 text-center">
+          <p className="text-xs text-muted-foreground">
             If you're in crisis: in the US/Canada call or text{" "}
             <span className="font-medium text-foreground">988</span> · UK{" "}
             <span className="font-medium text-foreground">116 123</span> ·
@@ -175,167 +204,24 @@ function Landing() {
             </a>
           </p>
         </section>
-
-        <section
-          id="engines"
-          className="mx-auto max-w-6xl px-6 pb-24"
-        >
-          <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-sm uppercase tracking-widest text-accent">
-              The loop + what happens when they land
-            </p>
-            <h2 className="font-serif text-4xl text-foreground sm:text-5xl">
-              Care, designed as a system that learns from being cared for.
-            </h2>
-          </div>
-
-          <article className="mb-8 overflow-hidden rounded-3xl border border-border bg-card p-7 sm:p-9">
-            <div className="mb-5 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-primary">
-                <Radar className="h-5 w-5" />
-              </div>
-              <div className="font-mono text-xs text-muted-foreground">00</div>
-            </div>
-            <h3 className="font-serif text-2xl text-foreground">
-              How we reach people — a self-evolving loop
-            </h3>
-            <p className="mt-1 text-sm font-medium text-accent">
-              People come to us. We never monitor or target anyone.
-            </p>
-
-            <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-3">
-              {LOOP_STEPS.map((step, i) => (
-                <span key={step} className="flex items-center gap-2">
-                  <span className="rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-foreground">
-                    {step}
-                  </span>
-                  {i < LOOP_STEPS.length - 1 && (
-                    <span className="text-accent">→</span>
-                  )}
-                </span>
-              ))}
-            </div>
-
-            <ul className="mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
-              <li>
-                <span className="font-medium text-foreground">Listen = two signals.</span>{" "}
-                Loud = views/shares (reach only). REAL = a silent step:
-                watch-to-end → click → land on a quiet page → one private note.
-              </li>
-              <li>
-                We study platforms to get shown — we never let them decide
-                success. Like a lighthouse: we don't grade how bright the light
-                is (views), we grade whether a ship reached the harbor (one
-                real step toward help).
-              </li>
-              <li>
-                We never monitor, track, or target anyone. People come to us. A
-                human reviews every video before release.
-              </li>
-            </ul>
-          </article>
-
-          <div className="grid gap-5 sm:grid-cols-2">
-            {ENGINES.map((e, i) => {
-              const Icon = e.icon;
-              return (
-                <article
-                  key={e.title}
-                  className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 transition-shadow hover:shadow-[0_8px_40px_-12px_color-mix(in_oklab,var(--color-primary)_25%,transparent)]"
-                >
-                  <div className="mb-5 flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-primary">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div className="font-mono text-xs text-muted-foreground">
-                      0{i + 1}
-                    </div>
-                  </div>
-                  <h3 className="font-serif text-2xl text-foreground">
-                    {e.title}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-accent">
-                    {e.subtitle}
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {e.body}
-                  </p>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-4xl px-6 pb-28">
-          <div className="rounded-3xl border border-border bg-card p-10 text-center sm:p-14">
-            <h2 className="font-serif text-3xl text-foreground sm:text-4xl">
-              Built in the open. Built by people who care.
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-              Researchers, clinicians, engineers, designers, and people with
-              lived experience are all welcome. Kindred only works if it's
-              shaped by the community it serves.
-            </p>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-              <Button asChild size="lg" className="rounded-full">
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <Code2 className="mr-1 h-4 w-4" />
-                  Contribute on GitHub
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="ghost"
-                className="rounded-full"
-              >
-                <Link to="/chat">Try the conversation engine</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-xs text-muted-foreground sm:flex-row">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 px-6 py-8 text-xs text-muted-foreground sm:flex-row">
           <span>
             © {new Date().getFullYear()} Kindred · A community project, not
             medical care.
           </span>
           <div className="flex flex-wrap items-center gap-4">
-            <Link
-              to="/aird"
-              className="underline underline-offset-2 hover:text-foreground"
-            >
+            <Link to="/aird" className="underline underline-offset-2 hover:text-foreground">
               AIRD
             </Link>
-            <Link
-              to="/blog/ai-anxiety-guide"
-              className="underline underline-offset-2 hover:text-foreground"
-            >
+            <Link to="/blog/ai-anxiety-guide" className="underline underline-offset-2 hover:text-foreground">
               AI anxiety guide
             </Link>
-            <Link
-              to="/support"
-              className="underline underline-offset-2 hover:text-foreground"
-            >
+            <Link to="/support" className="underline underline-offset-2 hover:text-foreground">
               Support
             </Link>
-            <span>
-              In crisis? Call 988 (US/CA) · 116 123 (UK) ·{" "}
-              <a
-                className="underline underline-offset-2"
-                href="https://findahelpline.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                findahelpline.com
-              </a>
-            </span>
           </div>
         </div>
       </footer>
