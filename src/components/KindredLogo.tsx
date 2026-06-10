@@ -1,17 +1,26 @@
-import mark from "@/assets/kindred-mark.png";
+import logo from "@/assets/kindred-logo.png.asset.json";
 
-export function KindredLogo({ className }: { className?: string }) {
+export function KindredLogo({
+  className,
+  showWordmark = true,
+  size = "sm",
+}: {
+  className?: string;
+  showWordmark?: boolean;
+  size?: "sm" | "lg";
+}) {
+  const dim = size === "lg" ? "h-16 w-16" : "h-9 w-9";
   return (
     <div className={`flex items-center gap-2 ${className ?? ""}`}>
       <img
-        src={mark}
-        alt=""
-        width={28}
-        height={28}
-        className="h-7 w-7"
+        src={logo.url}
+        alt="Kindred"
+        className={`${dim} rounded-full object-cover`}
         loading="lazy"
       />
-      <span className="font-serif text-xl text-foreground">Kindred</span>
+      {showWordmark && (
+        <span className="font-serif text-xl text-foreground">Kindred</span>
+      )}
     </div>
   );
 }
