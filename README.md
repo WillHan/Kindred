@@ -11,6 +11,8 @@ Kindred is an open, non-profit project. We use AI for the opposite of what scare
 ## Who this is for
 People hurt by AI job loss and the "what is my purpose now" feeling that comes with it — anxiety, lost identity, isolation. Many try for a while, then go quiet. Today, no system is built to notice them early.
 
+Researchers have a name for this now: **AIRD — AI Replacement Dysfunction**. They named the problem; **Kindred is the human, non-clinical answer.** → [What AIRD is, and what actually helps](./AIRD.md)
+
 ## What Kindred is
 - A safe, **opt-in** first point of contact. People come to us — we don't hunt anyone down.
 - AI that helps us **listen**, respond with care, and point people to real, human help.
