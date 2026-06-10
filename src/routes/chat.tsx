@@ -16,6 +16,16 @@ export const Route = createFileRoute("/chat")({
         content:
           "A warm, non-clinical AI companion. Talk through what's on your mind, privately in your browser.",
       },
+      { property: "og:title", content: "Chat with Kindred" },
+      {
+        property: "og:description",
+        content:
+          "A warm, non-clinical AI companion. Talk through what's on your mind, privately in your browser.",
+      },
+      { property: "og:url", content: "https://kindred.mygoodcommonsense.com/chat" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://kindred.mygoodcommonsense.com/chat" },
     ],
   }),
   component: ChatLayout,
@@ -108,6 +118,7 @@ function ChatLayout() {
 
   return (
     <div className="flex h-screen w-full bg-background">
+      <h1 className="sr-only">Chat with Kindred</h1>
       <aside className="hidden w-72 shrink-0 flex-col border-r border-sidebar-border bg-sidebar md:flex">
         <div className="flex items-center justify-between px-4 py-4">
           <Link to="/" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">

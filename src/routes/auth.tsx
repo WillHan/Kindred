@@ -13,6 +13,12 @@ export const Route = createFileRoute("/auth")({
     meta: [
       { title: "Sign in to Kindred" },
       { name: "description", content: "Sign in or create an account to chat with Kindred." },
+      { property: "og:title", content: "Sign in to Kindred" },
+      { property: "og:description", content: "Sign in or create an account to chat with Kindred." },
+      { property: "og:url", content: "https://kindred.mygoodcommonsense.com/auth" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://kindred.mygoodcommonsense.com/auth" },
     ],
   }),
   component: AuthPage,
