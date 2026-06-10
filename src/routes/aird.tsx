@@ -6,20 +6,20 @@ import { ArrowRight, LifeBuoy } from "lucide-react";
 export const Route = createFileRoute("/aird")({
   head: () => ({
     meta: [
-      { title: "AIRD — what it is, and what actually helps" },
+      { title: "AIRD (AI Replacement Dysfunction) — what it is & what helps" },
       {
         name: "description",
         content:
-          "AIRD (AI Replacement Dysfunction): what it is, what it feels like, and simple, non-clinical things that help.",
+          "AIRD — AI Replacement Dysfunction — explained: what AIRD is, what AI Replacement Dysfunction feels like, and simple, non-clinical things that help.",
       },
       {
         property: "og:title",
-        content: "AIRD — what it is, and what actually helps",
+        content: "AIRD (AI Replacement Dysfunction) — what it is & what helps",
       },
       {
         property: "og:description",
         content:
-          "A name for the anxiety and lost identity people feel as AI threatens their work — and gentle, human steps that help.",
+          "AIRD (AI Replacement Dysfunction): a name for the anxiety and lost identity people feel as AI threatens their work — and gentle, human steps that help.",
       },
       { property: "og:type", content: "article" },
       { property: "og:url", content: "https://kindred.mygoodcommonsense.com/aird" },
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/aird")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "AIRD — what it is, and what actually helps",
+          headline: "AIRD (AI Replacement Dysfunction) — what it is, and what actually helps",
           description:
             "AIRD (AI Replacement Dysfunction): what it is, what it feels like, and simple, non-clinical things that help.",
           author: { "@type": "Organization", name: "Kindred" },
@@ -101,8 +101,8 @@ function AirdPage() {
         </div>
 
         <h1 className="text-balance font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl md:text-6xl">
-          AIRD — what it is, and{" "}
-          <span className="italic text-primary">what actually helps</span>
+          AIRD — AI Replacement Dysfunction:{" "}
+          <span className="italic text-primary">what it is, and what actually helps</span>
         </h1>
 
         <p className="mt-7 text-lg leading-relaxed text-muted-foreground">
@@ -113,7 +113,7 @@ function AirdPage() {
 
         <section className="mt-12">
           <h2 className="font-serif text-2xl text-foreground sm:text-3xl">
-            What is AIRD?
+            What is AIRD (AI Replacement Dysfunction)?
           </h2>
           <p className="mt-3 leading-relaxed text-muted-foreground">
             AIRD (AI Replacement Dysfunction) is a term coined in 2025 by

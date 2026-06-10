@@ -148,6 +148,18 @@ function Landing() {
               <a href="#engines">See how it works</a>
             </Button>
           </div>
+          <p className="mt-5 text-sm font-medium text-foreground">
+            Free · anonymous · no sign-up needed
+          </p>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Always free for you — funded by people who care, not by you.{" "}
+            <Link
+              to="/support"
+              className="underline underline-offset-2 hover:text-foreground"
+            >
+              Support Kindred
+            </Link>
+          </p>
           <p className="mt-6 text-xs text-muted-foreground">
             If you're in crisis: in the US/Canada call or text{" "}
             <span className="font-medium text-foreground">988</span> · UK{" "}
@@ -306,6 +318,12 @@ function Landing() {
               className="underline underline-offset-2 hover:text-foreground"
             >
               AI anxiety guide
+            </Link>
+            <Link
+              to="/support"
+              className="underline underline-offset-2 hover:text-foreground"
+            >
+              Support
             </Link>
             <span>
               In crisis? Call 988 (US/CA) · 116 123 (UK) ·{" "}

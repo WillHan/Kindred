@@ -100,6 +100,9 @@ function AuthPage() {
                 ? "Sign in to continue your conversations."
                 : "It takes a minute. Your chats stay private to you."}
             </p>
+            <p className="text-xs font-medium text-foreground">
+              Free, always. No credit card. You can stay anonymous.
+            </p>
           </div>
 
           <form onSubmit={onSubmit} className="space-y-4">
