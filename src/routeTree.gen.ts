@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SupportRouteImport } from './routes/support'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as CheckInRouteImport } from './routes/check-in'
 import { Route as ChatRouteImport } from './routes/chat'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AirdRouteImport } from './routes/aird'
@@ -27,6 +28,11 @@ const SupportRoute = SupportRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckInRoute = CheckInRouteImport.update({
+  id: '/check-in',
+  path: '/check-in',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChatRoute = ChatRouteImport.update({
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/aird': typeof AirdRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
+  '/check-in': typeof CheckInRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/support': typeof SupportRoute
   '/api/chat': typeof ApiChatRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByTo {
   '/aird': typeof AirdRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
+  '/check-in': typeof CheckInRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/support': typeof SupportRoute
   '/api/chat': typeof ApiChatRoute
@@ -93,6 +101,7 @@ export interface FileRoutesById {
   '/aird': typeof AirdRoute
   '/auth': typeof AuthRoute
   '/chat': typeof ChatRouteWithChildren
+  '/check-in': typeof CheckInRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/support': typeof SupportRoute
   '/api/chat': typeof ApiChatRoute
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
     | '/aird'
     | '/auth'
     | '/chat'
+    | '/check-in'
     | '/sitemap.xml'
     | '/support'
     | '/api/chat'
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
     | '/aird'
     | '/auth'
     | '/chat'
+    | '/check-in'
     | '/sitemap.xml'
     | '/support'
     | '/api/chat'
@@ -128,6 +139,7 @@ export interface FileRouteTypes {
     | '/aird'
     | '/auth'
     | '/chat'
+    | '/check-in'
     | '/sitemap.xml'
     | '/support'
     | '/api/chat'
@@ -140,6 +152,7 @@ export interface RootRouteChildren {
   AirdRoute: typeof AirdRoute
   AuthRoute: typeof AuthRoute
   ChatRoute: typeof ChatRouteWithChildren
+  CheckInRoute: typeof CheckInRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SupportRoute: typeof SupportRoute
   ApiChatRoute: typeof ApiChatRoute
@@ -160,6 +173,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/check-in': {
+      id: '/check-in'
+      path: '/check-in'
+      fullPath: '/check-in'
+      preLoaderRoute: typeof CheckInRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/chat': {
@@ -229,6 +249,7 @@ const rootRouteChildren: RootRouteChildren = {
   AirdRoute: AirdRoute,
   AuthRoute: AuthRoute,
   ChatRoute: ChatRouteWithChildren,
+  CheckInRoute: CheckInRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SupportRoute: SupportRoute,
   ApiChatRoute: ApiChatRoute,
@@ -237,13 +258,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
